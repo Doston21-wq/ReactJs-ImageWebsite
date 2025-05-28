@@ -1,12 +1,37 @@
-# React + Vite
+# React + Vite Image Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Imgly** — Your Favorite Image Hub 🌟
 
-Currently, two official plugins are available:
+Imgly is a modern and clean image gallery website that showcases curated collections of stunning visuals — from photography to product shots. Whether you're an artist, a creator, or just someone who loves beautiful images, Imgly is the place to find and share inspiration.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🖼️ Curated image collections
+- 🔍 Fast image search and filtering
+- 🌈 Categories like Nature, People, Tech, and more
+- 💖 "Favorites" section (Anashuna Yoqtirgala)
+- 📱 Fully responsive design
+- ⚡ Smooth, fast-loading gallery
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Use Cases
+
+- Inspiration gallery for designers & creators
+- Product image showcase
+- Portfolio display
+- Visual bookmarks
+
+## 🛠️ Tech Stack
+
+- React / Next.js (or your preferred frontend)
+- TailwindCSS for styling
+- Firebase / Supabase / Sanity (for image storage and metadata)
+- Unsplash API / Pexels API (optional for dynamic content)
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/Doston21-wq/ReactJs-ImageWebsite.git
+
+npm install
+
+npm run dev
