@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useGlobalContext } from './context';
 import { BsHeart, BsHeartFill } from 'react-icons/bs';
 
-const url = 'https://api.unsplash.com/search/photos?client_id=xH2dss2cIxvpVJ1yiprAgYw0DWIcu3JBtgqVuVT4iaM&per_page=20';
+const url = 'https://api.unsplash.com/search/photos?client_id=xH2dss2cIxvpVJ1yiprAgYw0DWIcu3JBtgqVuVT4iaM&per_page=40';
 
 const Gallery = () => {
   const { searchTerm } = useGlobalContext();
