@@ -1,23 +1,29 @@
-import {useState, useContext, createContext} from 'react';
-
+import { useState, useContext, createContext, useEffect } from 'react';
 
 const AppContext = createContext();
 
-export const AppProvider = ({children}) => {
-    const [isDarkTheme, setIsDarkTheme] = useState(false);
-    const [searchTerm, setSearchTerm] = useState('cat');
-      const ToggleTheme= () => {
-        const newDarkTheme = !isDarkTheme;
-        setIsDarkTheme(newDarkTheme);
+export const AppProvider = ({ children }) => {
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('cat');
 
-        const body=document.querySelector('body');
-        body.classList.toggle('dark-theme')
-        console.log(body)
-      }
-      return(
-        <AppContext.Provider value={{isDarkTheme, ToggleTheme, searchTerm, setSearchTerm}}>
-            {children}
-        </AppContext.Provider>
-      )
-}
+  const ToggleTheme = () => {
+    setIsDarkTheme(prevTheme => !prevTheme);
+  };
+
+  useEffect(() => {
+    const body = document.querySelector('body');
+    if (isDarkTheme) {
+      body.classList.add('dark-theme');
+    } else {
+      body.classList.remove('dark-theme');
+    }
+  }, [isDarkTheme]); // React-way of handling DOM effects based on state
+
+  return (
+    <AppContext.Provider value={{ isDarkTheme, ToggleTheme, searchTerm, setSearchTerm }}>
+      {children}
+    </AppContext.Provider>
+  );
+};
+
 export const useGlobalContext = () => useContext(AppContext);
