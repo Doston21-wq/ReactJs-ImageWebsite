@@ -26,7 +26,14 @@ if(isError){
 
   
   return (
-    <div>Gallery</div>
+    <section className='Image-contanier'>
+      {
+        data.results.map((item)=>{
+          const url=item?.urls?.regular
+        return   <img src={url} alt={item.alt_description} />
+        })
+      }
+    </section>
   )
 }
 
