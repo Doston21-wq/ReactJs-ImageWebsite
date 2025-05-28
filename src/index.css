@@ -68,12 +68,17 @@ body {
 
 .form-input {
   padding: 0.5rem 1rem;
-  border: 2px solid #ccc;
+  border: 2px solid #00ffc8;
   border-radius: 8px;
   font-size: 1rem;
   width: 250px;
 }
-
+input:focus{
+   border-color: #00ffc8;
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 3px #ffffff; 
+}
 .search-input {
   background-color: white;
 }
