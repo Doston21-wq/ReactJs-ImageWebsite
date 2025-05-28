@@ -101,24 +101,76 @@ body {
 .btn:hover {
   background-color: #0056b3;
 }
-
-/* Galereya rasmlar qatori */
 .image-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 2rem;
+}
+
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .img {
   width: 100%;
   height: 250px;
   object-fit: cover;
+  display: block;
   border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+/* Like button style */
+.like-btn {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 0.4rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #e74c3c;
+  transition: transform 0.2s ease;
+  z-index: 10;
+}
+
+.like-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Top-right position */
+.like-btn.top {
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+/* Bottom-right position */
+.like-btn.bottom {
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+
+/* Liked style */
+.like-btn.liked {
+  background-color: #e74c3c;
+  color: white;
+}
+.download-btn {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  z-index: 10;
+}
+
+.download-btn:hover {
+  background: #2980b9;
 }
