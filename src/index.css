@@ -1,4 +1,3 @@
-/* ============= GLOBAL CSS =============== */
 
 *,
 ::after,
@@ -10,17 +9,116 @@
 
 html {
   font-size: 100%;
-} /*16px*/
+}
 
-.dark-theme{
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.dark-theme {
   background-color: #333;
   color: white;
 }
 
-body {
-background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
- 
+.toggle-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.dark-toggle {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.dark-toggle:hover {
+  transform: scale(1.2);
+}
+
+.toggle-icon {
+  pointer-events: none;
+}
+
+
+.title {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2rem;
+}
+
+.title.dark-theme {
+  color: #f0f0f0;
+}
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-input {
+  padding: 0.5rem 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 250px;
+}
+
+.search-input {
+  background-color: white;
+}
+
+.dark-theme .search-input {
+  background-color: #555;
+  border-color: #888;
+  color: white;
+}
+
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Galereya rasmlar qatori */
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }

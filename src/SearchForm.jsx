@@ -3,7 +3,7 @@ import { FiSearch } from 'react-icons/fi';
 import { useGlobalContext } from './context';
 
 const SearchForm = () => {
-  const { setSearchTerm } = useGlobalContext(); // ✅ TO‘G‘RILANDI
+  const { setSearchTerm } = useGlobalContext(); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,4 +30,4 @@ const SearchForm = () => {
   );
 };
 
-export default SearchForm; // ✅ TO‘G‘RILANDI
+export default SearchForm; 

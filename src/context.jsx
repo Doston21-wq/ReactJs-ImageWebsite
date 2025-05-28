@@ -17,7 +17,7 @@ export const AppProvider = ({ children }) => {
     } else {
       body.classList.remove('dark-theme');
     }
-  }, [isDarkTheme]); // React-way of handling DOM effects based on state
+  }, [isDarkTheme]); 
 
   return (
     <AppContext.Provider value={{ isDarkTheme, ToggleTheme, searchTerm, setSearchTerm }}>
