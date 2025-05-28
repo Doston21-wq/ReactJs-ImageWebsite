@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import React from 'react'
-const url='https://api.unsplash.com/search/photos?client_id=xH2dss2cIxvpVJ1yiprAgYw0DWIcu3JBtgqVuVT4iaM&query=cat'
+const url='https://api.unsplash.com/search/photos?client_id=xH2dss2cIxvpVJ1yiprAgYw0DWIcu3JBtgqVuVT4iaM&query=dog'
 const Gallery = () => {
   const {data, isError, isLoading} = useQuery({
     queryKey: ['images'],
@@ -30,7 +30,7 @@ if(isError){
       {
         data.results.map((item)=>{
           const url=item?.urls?.regular
-        return   <img src={url} alt={item.alt_description} />
+        return   <img src={url}className='img' alt={item.alt_description} />
         })
       }
     </section>
