@@ -122,7 +122,6 @@ body {
   border-radius: 10px;
 }
 
-/* Like button style */
 .like-btn {
   position: absolute;
   background: rgba(255, 255, 255, 0.8);
@@ -140,19 +139,19 @@ body {
   transform: scale(1.2);
 }
 
-/* Top-right position */
+
 .like-btn.top {
   top: 0.5rem;
   right: 0.5rem;
 }
 
-/* Bottom-right position */
+
 .like-btn.bottom {
   bottom: 0.5rem;
   right: 0.5rem;
 }
 
-/* Liked style */
+
 .like-btn.liked {
   background-color: #e74c3c;
   color: white;
